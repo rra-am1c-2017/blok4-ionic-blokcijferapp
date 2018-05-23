@@ -1,3 +1,15 @@
 page-home {
+  $background_color: lightgrey;
 
+  ion-row {
+    border: 2px solid darken($background_color, 10%);
+    padding: 1em;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: $background_color;
+  }
+
+  ion-title {
+    text-align: center;
+  }
 }
