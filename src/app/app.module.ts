@@ -12,7 +12,8 @@ import { TestPage } from '../pages/test/test';
 import { Am1aPage} from '../pages/am1a/am1a';
 import { Am1bPage } from '../pages/am1b/am1b'
 import { Am1cPage} from '../pages/am1c/am1c';
-import { Am1dPage } from '../pages/am1d/am1d'
+import { Am1dPage } from '../pages/am1d/am1d';
+import { Am1ePage } from '../pages/am1e/am1e';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { GradesProvider } from '../providers/grades/grades';
     Am1aPage,
     Am1bPage,
     Am1cPage,
-    Am1dPage
+    Am1dPage,
+    Am1ePage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { GradesProvider } from '../providers/grades/grades';
     Am1aPage,
     Am1bPage,
     Am1cPage,
-    Am1dPage
+    Am1dPage,
+    Am1ePage
   ],
   providers: [
     StatusBar,

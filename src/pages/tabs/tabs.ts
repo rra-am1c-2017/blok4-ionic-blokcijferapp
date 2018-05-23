@@ -5,6 +5,7 @@ import { Am1aPage} from '../am1a/am1a';
 import { Am1bPage } from '../am1b/am1b';
 import { Am1cPage } from '../am1c/am1c';
 import { Am1dPage } from '../am1d/am1d';
+import { Am1ePage } from '../am1e/am1e';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class TabsPage {
   tab3Root = Am1bPage;
   tab4Root = Am1cPage;
   tab5Root = Am1dPage;
+  tab6Root = Am1ePage;
   
 
   constructor() {

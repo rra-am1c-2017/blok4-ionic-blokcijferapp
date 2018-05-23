@@ -15,7 +15,7 @@ import { GradesProvider } from '../../providers/grades/grades';
   templateUrl: 'am1a.html',
 })
 export class Am1aPage {
-  public grades = [];
+  public grades: any[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public gradesProvider: GradesProvider) {
   }

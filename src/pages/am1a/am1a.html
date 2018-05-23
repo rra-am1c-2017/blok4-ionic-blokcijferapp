@@ -15,19 +15,19 @@
 
 <ion-content padding>
 
-    <ion-card>
-        <img src="./assets/imgs/dagobert.png"/>
-        <ion-card-content *ngFor="let grade of grades">
-          <ion-card-title>
-             {{grade.firstname}} {{grade.infix}} {{grade.lastname}}
-          </ion-card-title>
-            <h5>Woonplaats</h5>
-            <p>{{grade.residence}}</p>
-            <h5>Absentie</h5>
-            <p>{{grade.absence}}</p>
-            <h5>Leeftijd</h5>
-            <p>{{grade.age}}</p>
-        </ion-card-content>
-    </ion-card>
+  <ion-card *ngFor="let grade of grades">
+      <img src="{{grade.photoPath}}"/>
+      <ion-card-content>
+        <ion-card-title>
+            {{grade.firstname}} {{grade.infix}} {{grade.lastname}}
+        </ion-card-title>
+          <h5>Woonplaats</h5>
+          <p>{{grade.residence}}</p>
+          <h5>Absentie</h5>
+          <p>{{grade.absence}}</p>
+          <h5>Leeftijd</h5>
+          <p>{{grade.age}}</p>
+      </ion-card-content>
+  </ion-card>
 
 </ion-content>
