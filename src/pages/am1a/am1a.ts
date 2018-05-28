@@ -39,8 +39,8 @@ export class Am1aPage {
                                                                name: "newResidence"}],
                                                      buttons: [{text: "Cancel"},
                                                                {text: "Voeg toe",
-                                                                handler: (alertData) => {
-                                                                  console.log(alertData.newResidence);
+                                                                handler: (alertData) => { // arrow-function
+                                                                  this.gradesProvider.updateResidence(alertData.newResidence);
                                                                 }}]
                                                               
                                                     });
