@@ -19,5 +19,4 @@ export class GradesProvider {
   public getGrades() {
     return this.http.get(this.url, {responseType: "json"});    
   }
-
 }

@@ -22,12 +22,11 @@
             {{grade.firstname}} {{grade.infix}} {{grade.lastname}}
         </ion-card-title>
           <h5>Woonplaats</h5>
-          <p>{{grade.residence}}</p>
+          <p (click)="changeResidence(grade.residence)">{{grade.residence}}</p>
           <h5>Absentie</h5>
           <p>{{grade.absence}}</p>
           <h5>Leeftijd</h5>
           <p>{{grade.age}}</p>
       </ion-card-content>
-  </ion-card>
-
+  </ion-card>s
 </ion-content>
