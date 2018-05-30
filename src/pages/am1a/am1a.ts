@@ -31,7 +31,7 @@ export class Am1aPage {
     });
   }
 
-  public changeResidence(residence) {
+  public changeResidence(id, residence) {
     console.log("Dit is de huidige woonplaats: " + residence);
     let changeResidenceInDb = this.alertCtrl.create({title: "Huidige woonplaats: " + residence, 
                                                      message: "Voer een nieuwe woonplaats in:",
@@ -40,7 +40,8 @@ export class Am1aPage {
                                                      buttons: [{text: "Cancel"},
                                                                {text: "Voeg toe",
                                                                 handler: (alertData) => { // arrow-function
-                                                                  this.gradesProvider.updateResidence(alertData.newResidence);
+                                                                  this.gradesProvider.updateResidence(id, alertData.newResidence);
+                                                                  this.navCtrl.push(Am1aPage);
                                                                 }}]
                                                               
                                                     });

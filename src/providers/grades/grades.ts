@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NavController} from 'ionic-angular';
+import { Am1aPage } from '../../pages/am1a/am1a';
 
 /*
   Generated class for the GradesProvider provider.
@@ -22,14 +24,17 @@ export class GradesProvider {
     return this.http.get(this.url, {responseType: "json"});    
   }
 
-  public updateResidence(residence) {
+  public updateResidence(id, residence) {
     console.log("Dit is de ingevoerde woonplaats weergegeven door de provider: " + residence);
     let params = new HttpParams();
+    params = params.set('id', id);
     params = params.set('residence', residence );
     
     this.http.post(this.url_update_residence,
-                   params).subscribe(data  => {});
-
+                   params, {responseType: 'json'}).subscribe((data: any[]) => {
+                      console.log(data);
+                      return data;
+                   });
 
   }
 }
