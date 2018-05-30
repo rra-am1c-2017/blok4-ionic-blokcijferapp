@@ -48,4 +48,21 @@ export class Am1aPage {
     changeResidenceInDb.present();
   }
 
+  public changeAbsence(id, absence) {
+    let changeAbsenceInDb = this.alertCtrl.create({title: "Absence: " + absence, 
+                                                     message: "Voer een nieuwe absentie in:",
+                                                     inputs: [{type: "text",
+                                                               name: "newAbsence"}],
+                                                     buttons: [{text: "Cancel"},
+                                                               {text: "Voeg toe",
+                                                                handler: (alertData) => { // arrow-function
+                                                                  this.gradesProvider.updateAbsence(id, alertData.newAbsence);
+                                                                  this.navCtrl.push(Am1aPage);
+                                                                }}]
+                                                              
+                                                    });
+    changeAbsenceInDb.present();
+  }
+
+
 }

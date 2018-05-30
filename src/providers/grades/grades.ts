@@ -15,6 +15,7 @@ export class GradesProvider {
   // private url: string = '../assets/data.json';
   private url: string = 'http://blokcijferapp-am1c.nl/data.php';
   private url_update_residence = "http://blokcijferapp-am1c.nl/update_residence.php";
+  private url_update_absence = "http://blokcijferapp-am1c.nl/update_absence.php";
 
   constructor(public http: HttpClient) {
     console.log('Hello GradesProvider Provider');
@@ -36,5 +37,18 @@ export class GradesProvider {
                       return data;
                    });
 
+  }
+
+  public updateAbsence(id, absence) {
+    
+    let params = new HttpParams();
+    params = params.set('id', id);
+    params = params.set('absence', absence );
+    
+    this.http.post(this.url_update_absence,
+                   params, {responseType: 'json'}).subscribe((data: any[]) => {
+                      console.log(data);
+                      return data;
+                   });
   }
 }

@@ -24,7 +24,7 @@
           <h5>Woonplaats</h5>
           <p (click)="changeResidence(grade.id, grade.residence)">{{grade.residence}}</p>
           <h5>Absentie</h5>
-          <p>{{grade.absence}}</p>
+          <p (click)="changeAbsence(grade.id, grade.absence)">{{grade.absence}}</p>
           <h5>Leeftijd</h5>
           <p>{{grade.age}}</p>
       </ion-card-content>
