@@ -62,6 +62,13 @@ export class Am1aPage {
                                                               
                                                     });
     changeAbsenceInDb.present();
+}
+
+  public calculateAge(date) {
+    let now = new Date();
+    let birthday = new Date(date);
+    console.log(now);
+    return now.getFullYear() - birthday.getFullYear();
   }
 
 

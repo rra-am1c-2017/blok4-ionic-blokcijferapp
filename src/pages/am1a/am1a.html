@@ -26,7 +26,7 @@
           <h5>Absentie</h5>
           <p (click)="changeAbsence(grade.id, grade.absence)">{{grade.absence}}</p>
           <h5>Leeftijd</h5>
-          <p>{{grade.age}}</p>
+          <p>{{calculateAge(grade.birthday)}}</p>
       </ion-card-content>
   </ion-card>
 </ion-content>
