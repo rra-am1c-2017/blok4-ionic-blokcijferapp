@@ -32,7 +32,7 @@ export class Am1aPage {
   }
 
   public changeResidence(id, residence) {
-    console.log("Dit is de huidige woonplaats: " + residence);
+    console.log("Dit is de huidige woonplaats: " + residence + "id: " + id);
     let changeResidenceInDb = this.alertCtrl.create({title: "Huidige woonplaats: " + residence, 
                                                      message: "Voer een nieuwe woonplaats in:",
                                                      inputs: [{type: "text",
@@ -41,11 +41,12 @@ export class Am1aPage {
                                                                {text: "Voeg toe",
                                                                 handler: (alertData) => { // arrow-function
                                                                   this.gradesProvider.updateResidence(id, alertData.newResidence);
-                                                                  this.navCtrl.push(Am1aPage);
+                                                                  
                                                                 }}]
                                                               
                                                     });
     changeResidenceInDb.present();
+    this.navCtrl.push(Am1aPage);
   }
 
   public changeAbsence(id, absence) {
@@ -57,11 +58,12 @@ export class Am1aPage {
                                                                {text: "Voeg toe",
                                                                 handler: (alertData) => { // arrow-function
                                                                   this.gradesProvider.updateAbsence(id, alertData.newAbsence);
-                                                                  this.navCtrl.push(Am1aPage);
+                                                                  
                                                                 }}]
                                                               
                                                     });
     changeAbsenceInDb.present();
+    this.navCtrl.push(Am1aPage);
 }
 
   public calculateAge(date) {
