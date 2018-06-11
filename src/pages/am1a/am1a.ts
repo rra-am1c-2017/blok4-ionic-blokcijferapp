@@ -41,12 +41,10 @@ export class Am1aPage {
                                                                {text: "Voeg toe",
                                                                 handler: (alertData) => { // arrow-function
                                                                   this.gradesProvider.updateResidence(id, alertData.newResidence);
-                                                                  
-                                                                }}]
-                                                              
+                                                                  this.navCtrl.push(Am1aPage);
+                                                                }}]                                                              
                                                     });
     changeResidenceInDb.present();
-    this.navCtrl.push(Am1aPage);
   }
 
   public changeAbsence(id, absence) {
@@ -58,12 +56,11 @@ export class Am1aPage {
                                                                {text: "Voeg toe",
                                                                 handler: (alertData) => { // arrow-function
                                                                   this.gradesProvider.updateAbsence(id, alertData.newAbsence);
-                                                                  
+                                                                  this.navCtrl.push(Am1aPage);
                                                                 }}]
                                                               
                                                     });
     changeAbsenceInDb.present();
-    this.navCtrl.push(Am1aPage);
 }
 
   public calculateAge(date) {

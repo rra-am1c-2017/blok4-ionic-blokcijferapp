@@ -14,8 +14,8 @@ import { Am1aPage } from '../../pages/am1a/am1a';
 export class GradesProvider {
   // private url: string = '../assets/data.json';
   private url: string = 'http://blokcijferapp-am1c.nl/data.php';
-  private url_update_residence = "http://blokcijferapp-am1c.nl/update_residence.php";
-  private url_update_absence = "http://blokcijferapp-am1c.nl/update_absence.php";
+  private url_update_residence: string = "http://blokcijferapp-am1c.nl/update_residence.php";
+  private url_update_absence: string = "http://blokcijferapp-am1c.nl/update_absence.php";
 
   constructor(public http: HttpClient) {
     console.log('Hello GradesProvider Provider');
@@ -34,7 +34,7 @@ export class GradesProvider {
     this.http.post(this.url_update_residence,
                    params, {responseType: 'json'}).subscribe((data: any[]) => {
                       console.log(data);
-                      return data;
+                      //return data;
                    });
 
   }
@@ -48,7 +48,6 @@ export class GradesProvider {
     this.http.post(this.url_update_absence,
                    params, {responseType: 'json'}).subscribe((data: any[]) => {
                       console.log(data);
-                      return data;
                    });
   }
 }
